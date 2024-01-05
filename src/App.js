@@ -1,32 +1,16 @@
-import logo from './logo.svg';
+
 import './App.css';
-import { useEffect, useState } from 'react';
-import LineChart from './components/LineChart2';
-import FormComponent2 from './components/FormComponent2';
+import LineChart from './components/LineChart';
 import { Chart as ChartJS } from 'chart.js/auto';
+import { useSelector } from 'react-redux';
+import FormComponent from './components/FormComponent';
 
 function App() {
-  const [data, setData] = useState([]);
-  const [userData, setUserData] = useState({
-    labels: [],
-    datasets: [
-      {
-        label: 'Weight',
-        data: [],
-        backgroundColor: ['blue'],
-        borderWidth: '2',
-        borderColor: 'black',
-      },
-    ],
-  });
 
-  function addUserData(obj) {
-    setData((prevArray) => [...prevArray, obj]);
-  }
 
-  useEffect(() => {
-    // Update userData whenever data changes
-    setUserData({
+  const data = useSelector((state)=>state.UserSlice)
+
+  const userDetails ={
       labels: data.map((obj) => obj.Date),
       datasets: [
         {
@@ -37,8 +21,7 @@ function App() {
           borderColor: 'black',
         },
       ],
-    });
-  }, [data]);
+    }
 
   
 
@@ -52,15 +35,16 @@ function App() {
       </div>
       {/* ROW-2 */}
       <div className='row justify-content-center'>
-        <div className='col-6 '>
-          <FormComponent2 addUserData={addUserData} />
+        <div className='col-sm-12 col-md-10 col-lg-8 col-xl-8'>
+         <FormComponent/>
+
         </div>
       </div>
       {/* ROW-3 */}
       <div className='row'>
 
         <div className='col-12'>
-        <LineChart chartData={userData} />
+        <LineChart chartData={userDetails}  />
         </div>
 
         
