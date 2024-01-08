@@ -25,6 +25,32 @@ function App() {
 
   
 
+  // return (
+  //   <div className='container pt-5 pb-5'>
+  //     {/* ROW-1 */}
+  //     <div className='row '>
+  //      <div className='col-12'>
+  //      <h1 className='text-center'>Weightloss Tracker</h1>
+  //      </div>
+  //     </div>
+  //     {/* ROW-2 */}
+  //     <div className='row justify-content-center'>
+  //       <div className='col-sm-12 col-md-10 col-lg-8 col-xl-8'>
+  //        <FormComponent/>
+
+  //       </div>
+  //     </div>
+  //     {/* ROW-3 */}
+  //     <div className='row'>
+
+  //       <div className='col-12 '>
+  //       <LineChart chartData={userDetails}  />
+  //       </div>
+
+        
+  //     </div>
+  //   </div>
+  // );
   return (
     <div className='container pt-5 pb-5'>
       {/* ROW-1 */}
@@ -34,21 +60,16 @@ function App() {
        </div>
       </div>
       {/* ROW-2 */}
-      <div className='row justify-content-center'>
-        <div className='col-sm-12 col-md-10 col-lg-8 col-xl-8'>
+      <div className='row justify-content-center align-items-center m-3'>
+        <div className='col-sm-12 col-md-12 col-lg-4 col-xl-4'>
          <FormComponent/>
-
+        </div>
+        <div className='col-sm-12 col-md-12 col-lg-8 col-xl-8 order-1'>
+        <LineChart chartData={userDetails}/>
         </div>
       </div>
       {/* ROW-3 */}
-      <div className='row'>
-
-        <div className='col-12'>
-        <LineChart chartData={userDetails}  />
-        </div>
-
-        
-      </div>
+     
     </div>
   );
 }

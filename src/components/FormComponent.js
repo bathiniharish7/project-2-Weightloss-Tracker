@@ -9,8 +9,8 @@ function FormComponent({addUserData}) {
     const [date,setDate] = useState('')
 
   return (
-    <div className='border  mt-5 p-4'>
-        <h2 className='text-primary text-center'>Add Details</h2>
+    <div className='border  mt-3 p-3'>
+       
         <div className='mt-3'>
             <label>Weight</label>
             <input type='number' className='form-control' value={weight} onChange={(e)=>{setWeight(parseInt(e.target.value))}}/>
