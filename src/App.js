@@ -56,7 +56,7 @@ function App() {
       {/* ROW-1 */}
       <div className='row '>
        <div className='col-12'>
-       <h1 className='text-center'>Weightloss Tracker</h1>
+       <h1 className='text-center'>Weightloss Tracker Using Redux-Toolkit</h1>
        </div>
       </div>
       {/* ROW-2 */}
@@ -64,11 +64,13 @@ function App() {
         <div className='col-sm-12 col-md-12 col-lg-4 col-xl-4'>
          <FormComponent/>
         </div>
-        <div className='col-sm-12 col-md-12 col-lg-8 col-xl-8 order-1'>
+        <div className='col-sm-12 col-md-12 col-lg-8 col-xl-8 order-1 p-sm-0 mt-sm-4' style={{height:'400px'}}>
         <LineChart chartData={userDetails}/>
         </div>
       </div>
       {/* ROW-3 */}
+
+     
      
     </div>
   );
