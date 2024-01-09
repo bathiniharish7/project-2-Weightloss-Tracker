@@ -52,7 +52,7 @@ function App() {
   //   </div>
   // );
   return (
-    <div className='container pt-5 pb-5'>
+    <div className='container  pt-5 pb-5'>
       {/* ROW-1 */}
       <div className='row '>
        <div className='col-12'>
@@ -64,7 +64,7 @@ function App() {
         <div className='col-sm-12 col-md-12 col-lg-4 col-xl-4'>
          <FormComponent/>
         </div>
-        <div className='col-sm-12 col-md-12 col-lg-8 col-xl-8 order-1 p-sm-0 mt-sm-4' style={{height:'400px'}}>
+        <div className='mt-4 px-0 col-12 col-md-12 col-lg-8 col-xl-8 order-1 m-lg-0' style={{height:'400px'}}>
         <LineChart chartData={userDetails}/>
         </div>
       </div>
